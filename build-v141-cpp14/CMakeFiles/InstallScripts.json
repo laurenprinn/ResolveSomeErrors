@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"Q:/source/AppModBenchMark/ResolveSomeErrors/build-v141-cpp14/cmake_install.cmake",
+		"Q:/source/AppModBenchMark/ResolveSomeErrors/build-v141-cpp14/ResolveSomeErrors/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

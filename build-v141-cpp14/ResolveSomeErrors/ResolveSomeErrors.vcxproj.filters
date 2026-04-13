@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Q:\source\AppModBenchMark\ResolveSomeErrors\ResolveSomeErrors\ResolveSomeErrors.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Q:\source\AppModBenchMark\ResolveSomeErrors\ResolveSomeErrors\ResolveSomeErrors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Q:\source\AppModBenchMark\ResolveSomeErrors\ResolveSomeErrors\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A9D662E2-78F8-39BD-92FC-9E36E2364A18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{99D59AF9-97DF-3779-A3E7-6C6171046144}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

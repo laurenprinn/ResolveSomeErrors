@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"Q:/source/AppModBenchMark/ResolveSomeErrors/build-modern-errors/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

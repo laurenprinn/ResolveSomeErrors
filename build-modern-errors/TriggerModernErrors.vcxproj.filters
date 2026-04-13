@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Q:\source\AppModBenchMark\ResolveSomeErrors\build-modern-errors\TriggerModernErrorsACTUAL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Q:\source\AppModBenchMark\ResolveSomeErrors\build-modern-errors\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6B3684C4-3307-39F6-81A0-39908A18770F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
