@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"Q:/source/AppModBenchMark/ResolveSomeErrors/build/cmake_install.cmake",
-		"Q:/source/AppModBenchMark/ResolveSomeErrors/build/ResolveSomeErrors/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
