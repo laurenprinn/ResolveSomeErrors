@@ -35,8 +35,8 @@ enum Color { Red, Blue };
 enum Size { Small, Large };
 
 void triggerC5286() {
-	// UNCOMMENT to trigger C5286:
-	bool same = (Red == Small);  // WARNING C5054 & 4189
+	// Fixed: Cast enums to int for comparison
+	bool same = (static_cast<int>(Red) == static_cast<int>(Small));
 }
 
 
@@ -59,11 +59,11 @@ enum Priority { Low = 1, High = 10 };
 void triggerC5292_C5294() {
 	double threshold = 5.5;
 
-	// UNCOMMENT to trigger C5292:
-	bool test1 = (High > threshold);  // WARNING C5055 & C4189
+	// Fixed: Cast enum to double for comparison
+	bool test1 = (static_cast<double>(High) > threshold);
 
-	// UNCOMMENT to trigger C5294:
-	bool test2 = (threshold < Low);  // WARNING C5055 & C4189
+	// Fixed: Cast enum to double for comparison
+	bool test2 = (threshold < static_cast<double>(Low));
 }
 
 
@@ -114,7 +114,7 @@ void triggerC5333() {
 // ============================================================================
 
 void actualC5286() {
-	bool same = (Color::Red == Size::Small);  // WARNING C5286
+	bool same = (static_cast<int>(Red) == static_cast<int>(Small));
 	std::cout << "Same: " << same << std::endl;
 }
 
@@ -127,8 +127,8 @@ enum Priority2 { Low2 = 1, High2 = 10 };
 void actualC5292_C5294() {
 	double threshold = 5.5;
 
-	bool test1 = (High2 > threshold);       // WARNING C5055
-	bool test2 = (threshold < Low2);        // WARNING C5055
+	bool test1 = (static_cast<double>(High2) > threshold);
+	bool test2 = (threshold < static_cast<double>(Low2));
 
 	std::cout << "Tests: " << test1 << ", " << test2 << std::endl;
 }
