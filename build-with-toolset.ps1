@@ -61,6 +61,12 @@ if ([string]::IsNullOrEmpty($SdkVersion)) {
 	$SdkVersion = $info.DefaultSdk
 }
 
+# Override C++ standard for v145 to use C++20
+if ($Toolset -eq "v145" -and $CppStandard -eq "14") {
+	$CppStandard = "20"
+	Write-Host "Note: Overriding C++ standard to C++20 for v145 toolset" -ForegroundColor Yellow
+}
+
 Write-Host "========================================" -ForegroundColor $color
 Write-Host "Building with $($info.Name) ($Toolset)" -ForegroundColor $color
 Write-Host "========================================" -ForegroundColor $color
