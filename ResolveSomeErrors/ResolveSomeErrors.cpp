@@ -15,7 +15,7 @@ enum Color { Red, Blue };
 enum Size { Small, Large };
 
 void colorCheck() {
-	bool same = (Red == Small);
+	bool same = (static_cast<int>(Red) == static_cast<int>(Small));
 }
 
 struct BadStruct {
@@ -28,8 +28,8 @@ enum Priority { Low = 1, High = 10 };
 
 void castTest() {
 	double threshold = 5.5;
-	bool test1 = (High > threshold);
-	bool test2 = (threshold < Low);
+	bool test1 = (static_cast<double>(High) > threshold);
+	bool test2 = (threshold < static_cast<double>(Low));
 }
 
 void triggerC5295() {
@@ -49,7 +49,7 @@ void eventHandler() {
 }
 
 void comparison() {
-	bool same = (Color::Red == Size::Small);
+	bool same = (static_cast<int>(Red) == static_cast<int>(Small));
 	std::cout << "Same: " << same << std::endl;
 }
 
