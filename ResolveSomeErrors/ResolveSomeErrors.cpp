@@ -11,7 +11,7 @@ enum Size { Small, Large };
 void comparison();
 
 void colorComparison() {
-	bool same = (Color::Red == Size::Small);
+	bool same = (static_cast<int>(Color::Red) == static_cast<int>(Size::Small));
 }
 
 struct myStruct {
@@ -24,8 +24,8 @@ enum Priority { Low = 1, High = 10 };
 
 void getThreshold() {
 	double threshold = 5.5;
-	bool test1 = (High > threshold);
-	bool test2 = (threshold < Low);
+	bool test1 = (static_cast<int>(High) > threshold);
+	bool test2 = (threshold < static_cast<int>(Low));
 }
 
 void getName() {
@@ -33,7 +33,7 @@ void getName() {
 }
 
 void comparison() {
-	bool same = (Color::Red == Size::Small);
+	bool same = (static_cast<int>(Color::Red) == static_cast<int>(Size::Small));
 	std::cout << "Same: " << same << std::endl;
 }
 
