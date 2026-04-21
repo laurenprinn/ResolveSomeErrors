@@ -14,25 +14,25 @@ Wrapper<myFunc> w1;
 enum Color { Red, Blue };
 enum Size { Small, Large };
 
-void colorCheck() {
+void comparison() {
 	bool same = (Red == Small);
 }
 
-struct BadStruct {
+struct myStruct {
 	int& ref;
 
-	BadStruct& operator=(const BadStruct&) = default;
+	myStruct& operator=(const myStruct&) = default;
 };
 
 enum Priority { Low = 1, High = 10 };
 
-void castTest() {
+void getThreshold() {
 	double threshold = 5.5;
 	bool test1 = (High > threshold);
 	bool test2 = (threshold < Low);
 }
 
-void triggerC5295() {
+void getName() {
 	char name[5] = "Hello";
 }
 
@@ -40,12 +40,12 @@ template<typename T>
 concept Integral = std::is_integral_v<T>;
 
 template<Integral T>
-void requiresInt(T value) {
+void printValue(T value) {
 	std::cout << value << std::endl;
 }
 
 void eventHandler() {
-	requiresInt(42);
+	printValue(42);
 }
 
 void comparison() {
@@ -62,7 +62,7 @@ void printGreeting() {
 
 int main() {
 	comparison();
-	castTest();
+	getThreshold();
 	printGreeting();
 	return 0;
 }
