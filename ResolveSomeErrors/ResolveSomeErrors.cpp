@@ -6,16 +6,12 @@ void myFunc() {
 	std::cout << "Hello\n";
 }
 
-template<auto F>
-struct Wrapper {};
-
-Wrapper<myFunc> w1;
-
 enum Color { Red, Blue };
 enum Size { Small, Large };
+void comparison();
 
-void comparison() {
-	bool same = (Red == Small);
+void colorComparison() {
+	bool same = (Color::Red == Size::Small);
 }
 
 struct myStruct {
@@ -34,18 +30,6 @@ void getThreshold() {
 
 void getName() {
 	char name[5] = "Hello";
-}
-
-template<typename T>
-concept Integral = std::is_integral_v<T>;
-
-template<Integral T>
-void printValue(T value) {
-	std::cout << value << std::endl;
-}
-
-void eventHandler() {
-	printValue(42);
 }
 
 void comparison() {
